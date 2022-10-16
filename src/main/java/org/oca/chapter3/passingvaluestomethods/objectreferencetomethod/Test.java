@@ -1,0 +1,20 @@
+package org.oca.chapter3.passingvaluestomethods.objectreferencetomethod;
+
+public class Test {
+    public static void main(String[] args) {
+        Person person1 = new Person("John");
+        Person person2 = new Person("Paul");
+
+        System.out.println(person1.getName() + ":" + person2.getName());
+        swap(person1, person2);
+        System.out.println(person1.getName() + ":" + person2.getName());
+    }
+
+    private static void swap(Person p1, Person p2) {
+        Person temp = p1;
+        p1 = p2;
+        p1.setName("Henry");
+        p2 = temp;
+        p2.setName("Banana");
+    }
+}

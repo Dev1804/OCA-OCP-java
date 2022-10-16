@@ -12,11 +12,11 @@ public class Phone {
         return tested;
     }
 
-    boolean isPrime(int num) {
+    boolean isPrime(int num) { // method param num
         if (num <= 1) return false;
-        boolean result = true;
+        boolean result = true; // local variable result
 
-        for (int ctr = num - 1; ctr > 1; ctr--) {
+        for (int ctr = num - 1; ctr > 1; ctr--) { // local variable ctr
             if (num % ctr == 0) result = false;
         }
         return result;
@@ -24,6 +24,6 @@ public class Phone {
 
     public static void main(String[] args) {
         Phone phone = new Phone();
-        System.out.println(phone.isPrime(199999999));
+        System.out.println(phone.isPrime(6));
     }
 }
